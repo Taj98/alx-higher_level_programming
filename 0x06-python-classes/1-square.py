@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-
-
 class Square:
-    """
-    class Square with private instance attribute size
-    """
+    """type class square"""
     def __init__(self, size):
+        """Init the square class
+        Args:
+        param1: size is the type int attribute to make it private
+        """
         self.__size = size

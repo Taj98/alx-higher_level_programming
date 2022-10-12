@@ -1,20 +1,17 @@
 #!/usr/bin/python3
-
-
 class Square:
-    """
-    Class Square
-    """
+    """Type class square"""
     def __init__(self, size=0):
-        if type(size) is not int:
-            raise TypeError("size must be an integer")
+        """Init the square classs
+        Args:
+        param1: size is the type int attribute to make it private
+        """
+        if not isinstance(size, int):
+            raise TypeError("size mut be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
+        self.__size = size
 
-    """
-    Return area of Square object
-    """
     def area(self):
+        """Return the area of the square"""
         return (self.__size * self.__size)
