@@ -1,4 +1,3 @@
-# 0x0A Python - Inheritance :snake:
+# 0x0A. Python - Inheritance
 
 
-```

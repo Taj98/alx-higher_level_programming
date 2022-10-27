@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-def inherits_from(obj, a_class):
+"""inherits_from
+"""
 
-    """function to check is obj is inherited in a class
-    Arguments:
-        param1: obj
-        param2: a_class that matches the obj
-    Return:
-    True for issubclass of obj or False if not
+
+def inherits_from(obj, a_class):
+    """Function that returns True if the object is an instance
+    of a class that inherited (directly or indirectly) from the
+    specified class; otherwise False.
     """
 
-    if issubclass(type(obj), a_class) and type(obj) != a_class:
-        return True
-    else:
+    if type(obj) is a_class or not isinstance(obj, a_class):
         return False
+    else:
+        return True

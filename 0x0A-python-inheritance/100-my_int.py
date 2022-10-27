@@ -1,13 +1,20 @@
 #!/usr/bin/python3
+"""MyInt inherits from int
+"""
 
 
 class MyInt(int):
-    """Type class of MyInt inherit int type"""
+    """Inherits from int
+    """
 
-    def __eq__(self, other):
+    def __eq__(self, value):
+        """Magic method equals
+        """
 
-        return self.real != other
+        return super().__ne__(value)
 
-    def __ne__(self, other):
+    def __ne__(self, value):
+        """Magic method not equals
+        """
 
-        return self.real == other
+        return super().__eq__(value)

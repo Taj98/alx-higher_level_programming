@@ -1,14 +1,13 @@
 #!/usr/bin/python3
+"""is_same_class
+"""
+
+
 def is_same_class(obj, a_class):
-    """function to check is obj is the same class
-    Arguments:
-        param1: obj
-        param2: a_class that matches the obj
-    Return:
-    True for isinstance of obj or False if not
+    """Returns True if obj is same instance, else False
     """
 
-    if type(obj) == a_class:
+    if type(obj) is a_class:
         return True
     else:
         return False

@@ -1,7 +1,14 @@
 #!/usr/bin/python3
+"""BaseGeometry
+"""
+
+
 class BaseGeometry:
-    """Type class of BaseGeometry"""
+    """Contains a function area()
+    """
 
     def area(self):
+        """Function not implemented yet
+        """
 
         raise Exception("area() is not implemented")

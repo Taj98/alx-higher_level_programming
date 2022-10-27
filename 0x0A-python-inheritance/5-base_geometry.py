@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-class BaseGeometry:
-    """Type class of BaseGeometry"""
+"""BaseGeometry
+"""
 
+
+class BaseGeometry:
     pass
