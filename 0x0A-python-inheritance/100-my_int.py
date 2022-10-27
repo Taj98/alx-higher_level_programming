@@ -1,10 +1,13 @@
 #!/usr/bin/python3
+
+
 class MyInt(int):
-    def __init__(self, value):
-        self.num = value
+    """Type class of MyInt inherit int type"""
 
     def __eq__(self, other):
-        return self.num != other
+
+        return self.real != other
 
     def __ne__(self, other):
-        return self.num == other
+
+        return self.real == other
