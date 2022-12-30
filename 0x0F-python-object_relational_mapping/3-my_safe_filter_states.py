@@ -1,21 +1,10 @@
 #!/usr/bin/python3
 
-
+import sys
 import MySQLdb
-from sys import argv
 
-'''
-script that lists all states from the database
-'''
-if __name__ == "__main__":
-    cont = MySQLdb.connect(
-        host="localhost", port=3306, user=argv[1],
-        password=argv[2], database=argv[3])
-    cursor = cont.cursor()
-    cursor.execute(
-        "SELECT * FROM states WHERE name LIKE %s ORDER BY id ASC",
-        (argv[4],)
-        )
-    db = cursor.fetchall()
-    for i in db:
-        print(i)
+if __name__ == '__main__':
+    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states WHERE name=%s;", (sys.argv[4],))
+    [print(states) for states in cur.fetchall()]
